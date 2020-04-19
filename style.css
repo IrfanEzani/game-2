@@ -29,7 +29,7 @@ section {
 }
 
 .intro {
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +39,9 @@ transition: opacity 0.5s ease;
 
 .intro h1 {
   font-size: 2.5rem;
+}
+.intro img {
+  margin: 1rem 0;
 }
 
 .intro button, .match button  {
