@@ -23,6 +23,14 @@ const game = () => {
        const options = document.querySelectorAll('.options button');
        const playerHands = document.querySelector('.player-hand');
        const computerHands = document.querySelector('.computer-hand');
+       const hands = document.querySelectorAll('.hands img');
+
+       hands.forEach(hand => {
+         hand.addEventListener('animationend', function() {
+           this.style.animation = "";
+         } )
+       });
+
 
        //computer options
        const computerOptions = ["rock", "paper", "scissors"];
@@ -31,12 +39,19 @@ const game = () => {
            //computer choice
            const computerNum = Math.floor(Math.random() * 3);
            const computerChoice = computerOptions[computerNum];
-           //compare hands
 
+            setTimeout(()=>{
+              //compare hands
+               compareHands(this.textContent, computerChoice);
 
-           //update images
-           playerHands.src = `./img/${this.textContent}.png`;
-           computerHands.src = `./img/${computerChoice}.png`;
+              //update images
+              playerHands.src = `./img/${this.textContent}.png`;
+              computerHands.src = `./img/${computerChoice}.png`;
+            }, 2000);
+
+           //update animation instantly
+           playerHands.style.animation = "shakePlayer 2s ease"
+           computerHands.style.animation = "shakeComputer 2s ease"
          })
        })
      };
