@@ -18,6 +18,17 @@ const game = () => {
        });
      };
 
+     const endGame = () => {
+       const end = document.querySelector('.end')
+
+       if (pScore === 3 ) {
+         match.classList.add('fadeOut')
+         score.classList.add('fadeOut')
+         end.classList.add('fadeIn')
+
+       }
+     };
+
      //play match
      const playMatch = () => {
        const options = document.querySelectorAll('.options button');
@@ -117,6 +128,7 @@ const game = () => {
 
      startGame();
      playMatch();
+     endGame();
 
 
 }

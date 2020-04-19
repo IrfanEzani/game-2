@@ -16,7 +16,6 @@ section {
   justify-content: space-around;
   align-items: center;
   transition: 0.5s ease 0.5s;
-
 }
 
 .score h2 {
@@ -57,6 +56,24 @@ transition: opacity 0.5s ease;
   font-weight: bold;
   cursor : pointer;
 }
+
+.end {
+  display: block;
+  border: 2px solid black;
+  position: absolute;
+  left : 50%;
+  top:50%;
+  transform : translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+opacity: 0;
+
+}
+
+button:hover {
+  background:  #ff3750;
+   transition: all ease-out .3s;
+}
+
 
 .match {
   position: absolute;
