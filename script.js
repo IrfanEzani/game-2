@@ -117,6 +117,8 @@ const game = () => {
 
      startGame();
      playMatch();
+
+
 }
 
 //startGame
