@@ -1,13 +1,15 @@
 const game = () => {
     let pScore = 0;
     let cScore = 0;
-
-    //start the game
-     const startGame = () => {
+    
        const playBtn = document.querySelector('.intro button')
        const introScreen = document.querySelector('.intro')
        const match = document.querySelector('.match')
        const score = document.querySelector('.score')
+    
+    //start the game
+     const startGame = () => {
+       
 
 
       //fade effect
@@ -21,12 +23,11 @@ const game = () => {
      const endGame = () => {
        const end = document.querySelector('.end')
 
-       if (pScore === 3 ) {
-         match.classList.add('fadeOut')
-         score.classList.add('fadeOut')
-         end.classList.add('fadeIn')
-
-       }
+       if (pScore >= 3 || cScore >= 3) {
+        match.classList.add('fadeOut');
+        score.classList.add('fadeOut');
+        end.classList.add('fadeIn');
+    }
      };
 
      //play match
@@ -72,6 +73,7 @@ const game = () => {
        const computerScore = document.querySelector('.computer-score p')
        playerScore.textContent = pScore;
        computerScore.textContent = cScore;
+       endGame();
      }
 
      const compareHands = (playerChoice, computerChoice) => {
@@ -128,9 +130,6 @@ const game = () => {
 
      startGame();
      playMatch();
-     endGame();
-
-
 }
 
 //startGame
