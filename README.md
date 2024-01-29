@@ -1,4 +1,5 @@
 # Rock Paper Scissors Game
+<img width="1184" alt="image" src="https://github.com/IrfanEzani/rock-paper-scissor/assets/59435235/17b1d1ac-4a05-48de-8833-29c4e1253d31">
 
 ## Overview
 This Rock Paper Scissors game is a simple, interactive web application built using HTML, CSS, and JavaScript. The game pits a player against the computer in the classic hand game where rock beats scissors, scissors beat paper, and paper beats rock.
